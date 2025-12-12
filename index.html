@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>OUMI — React (JSX) تجريبي</title>
+  <style>
+    body{font-family: "Segoe UI", Tahoma, Arial; background:#f7f7f7; color:#222; padding:20px}
+    .card{max-width:900px;margin:30px auto;background:#fff;padding:20px;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+    .btn{display:inline-block;background:#2b6cb0;color:#fff;padding:8px 12px;border-radius:6px;text-decoration:none}
+  </style>
+  <!-- React + ReactDOM من CDN -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <!-- Babel لتحويل JSX في المتصفح (لا يُنصح للإنتاج) -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+
+  <!-- الكود JSX -->
+  <script type="text/babel">
+    const { useState } = React;
+
+    function App() {
+      const [count, setCount] = useState(0);
+      return (
+        <div className="card" style={{direction: 'rtl', textAlign: 'right'}}>
+          <h1>مرحباً في OUMI (JSX تجريبي)</h1>
+          <p>هذه تجربة بسيطة لتشغيل JSX مباشرة في المتصفح باستخدام Babel. لا تُستخدم هذه الطريقة في بيئة إنتاجية، لكنها مفيدة للمعاينة السريعة.</p>
+          <p>العدّاد: <strong>{count}</strong></p>
+          <p>
+            <button className="btn" onClick={() => setCount(c => c + 1)}>زيادة</button>
+            <a className="btn" style={{marginInlineStart: '8px'}} href="https://github.com/YASSIR1778/OUMI" target="_blank" rel="noopener">مستودع</a>
+          </p>
+        </div>
+      );
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<App />);
+  </script>
+</body>
+</html>

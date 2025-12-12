@@ -1,0 +1,65 @@
+/* CSS بسيط لصفحة OUMI */
+:root{
+  --bg:#f7f7f7;
+  --card:#ffffff;
+  --accent:#2b6cb0;
+  --text:#222;
+  --muted:#666;
+  --container-w:900px;
+  --radius:8px;
+  font-family: "Segoe UI", Tahoma, Arial, "Noto Sans", sans-serif;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.6;
+}
+
+.container{
+  max-width:var(--container-w);
+  margin:0 auto;
+  padding:24px;
+}
+
+.site-header{
+  background:linear-gradient(90deg, #ffffff, #fafafa);
+  border-bottom:1px solid #eee;
+  padding:18px 0;
+  margin-bottom:18px;
+}
+.site-header h1{margin:0;font-size:28px}
+.tagline{margin:4px 0 0;color:var(--muted)}
+
+.nav{margin-top:8px}
+.nav a{
+  color:var(--accent);
+  text-decoration:none;
+  margin-left:12px;
+  font-size:14px;
+}
+
+.hero{
+  background:var(--card);
+  border-radius:var(--radius);
+  padding:28px;
+  box-shadow:0 6px 18px rgba(12,24,38,0.06);
+}
+.hero h2{margin-top:0}
+.actions{margin-top:18px}
+.btn{
+  display:inline-block;
+  background:var(--accent);
+  color:#fff;
+  padding:10px 16px;
+  border-radius:6px;
+  text-decoration:none;
+}
+
+.instructions{margin-top:14px;color:var(--muted)}
+.site-footer{margin-top:28px;padding:18px 0;text-align:center;color:var(--muted)}
